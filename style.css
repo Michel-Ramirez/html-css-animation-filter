@@ -100,10 +100,10 @@
 
 .ex-10-icon {
     font-size: 60px;
-    animation: rotate 1s linear infinite;
+    animation: rotate 1s linear infinite; /*ad me */
 }
 
-@keyframes rotate {
+@keyframes rotate { /*ad me */
     0% {
         transform: rotate(360deg);
     }
@@ -114,25 +114,27 @@
 }
 
 .ex-11-icon:hover{
-    animation: rotate 1s linear reverse ;
+    animation: spin 2s linear ;
 }
 
-@keyframe rotate {
-    0% {
+@keyframes spin {
+    0%{
         transform: rotate(0);
     }
 
     50%{
         transform: rotate(180deg);
+    }
 
+    90%{
+        transform: rotate(320deg);
     }
 
     100%{
         transform: rotate(0);
-
     }
+    
 }
-
 
 
 .ex-12-button, .ex-13-button {
@@ -156,6 +158,7 @@
     width: 60px;
     height: 20px;
 }
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -164,3 +167,46 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: move-border-top 2s linear;
+}
+
+@keyframes move-border-top {
+    0% {
+        left: 5%;
+    }
+
+    50%{
+        left: calc(100% - 60px);
+    }
+
+    100%{
+        left: 10%;
+    }
+    
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: move-border-bottom 2s linear;
+}
+
+@keyframes move-border-bottom {
+    0% {
+        right: 5%;
+    }
+
+    50%{
+        right: calc(100% - 60px);
+    }
+
+    100%{
+        right: 10%;
+    }
+    
+}
+
+
+
+
+
